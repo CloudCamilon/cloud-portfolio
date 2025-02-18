@@ -9,7 +9,7 @@ export default function Button({
 }): JSX.Element {
   return (
     <div
-      className="cursor-pointer p-3 text-xl border font-bold border-black"
+      className="cursor-pointer p-3 text-lg border font-bold border-black"
       onClick={handleClick}
     >
       {title}

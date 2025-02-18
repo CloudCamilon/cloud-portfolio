@@ -13,8 +13,8 @@ export default function About(): JSX.Element {
         <div className="flex flex-row px-10">
           <div className=" w-1/2"></div>
           <div className=" w-1/2">
-            <div className="mt-12 mb-10 font-bold text-9xl">ABOUT</div>
-            <div className="text-xl leading-10">
+            <div className="mt-12 mb-10 font-bold text-5xl">ABOUT</div>
+            <div className="text-md leading-10">
               I’m an experienced software engineer with seven years in
               full-stack web and mobile development, proficient in Spring
               Framework, React, React Native, and DevOps deployment. Currently

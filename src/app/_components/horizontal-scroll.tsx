@@ -36,7 +36,7 @@ export const HorizontalScroll = ({
                 item.solid
                   ? ""
                   : `drop-shadow-[0_1.0px_1.0px_rgba(0.9,0.9,0.9,0.9)]`
-              } flex text-[200px] font-bold ${
+              } flex text-[175px] font-bold ${
               item.solid ? `text-black` : `text-white`
             } mx-4`}
           >

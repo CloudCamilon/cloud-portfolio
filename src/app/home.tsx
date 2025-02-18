@@ -1,6 +1,5 @@
 "use client";
 
-import Footer from "./_components/footer";
 import Header from "./_components/header";
 import { HorizontalScroll } from "./_components/horizontal-scroll";
 import Image from "next/image";
@@ -39,12 +38,12 @@ export default function Home() {
         </div>
         <div className={`${isLoading ? "hidden" : ""}`}>
           <Header selected="HOME" />
-          <div className="mt-12 mb-10 pl-10 pr-[600px]">
-            <div className="flex sans-serif text-7xl font-bold mb-12">
+          <div className="mt-10 mb-10 pl-10 pr-[600px]">
+            <div className="flex sans-serif text-5xl font-bold mb-5">
               Named after the clouds in the sky, now I&apos;m creating digital
               skies in the cloud.
             </div>
-            <div className="text-xl">
+            <div className="text-md">
               Hi, I&apos;m Cloud! A fullstack software engineer. Get to know me
               more by exploring my portfolio.
             </div>
@@ -60,15 +59,12 @@ export default function Home() {
           </div>
           <Image
             priority
-            className="z-1 absolute bottom-[-22%] right-[10%]"
+            className="z-1 absolute bottom-[-20%] right-[10%]"
             src="/cloud.png"
             alt="Cloud icon"
             width={width / 3}
             height={height / 3}
           />
-          <div className="w-full absolute bottom-0">
-            <Footer />
-          </div>
         </div>
       </main>
     </div>
