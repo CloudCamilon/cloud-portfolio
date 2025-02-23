@@ -18,7 +18,7 @@ const PROJECTS = [
   {
     title: "UX40 Core Transactions",
     tech: ["Next.js", "Spring Framework", "TypeScript", "PostgreSQL"],
-    url: "/ab.png",
+    url: "/ux40.png",
     content: {
       client: "Metrobank",
       desc: `Full-stack system for bank core transactions of

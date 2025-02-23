@@ -1,14 +1,14 @@
 import { JSX } from "react";
 import Image from "next/image";
 
-export function Misc(): JSX.Element {
+export default function Misc(): JSX.Element {
   return (
     <div className=" flex flex-col min-h-screen mt-24  p-10">
       <div className="gap-2 flex flex-col w-full  text-center justify-center align-middle items-center">
         <Image
           priority
           className=""
-          src="/pinnacle.png"
+          src="/pinnacle.jpg"
           alt="Cloud icon"
           height={383}
           width={620}
