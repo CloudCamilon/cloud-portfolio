@@ -20,11 +20,11 @@ const Company = ({
             className=""
             src={source}
             alt=""
-            width={175}
-            height={175}
+            width={150}
+            height={150}
           />
         </div>
-        <div className="text-lg">{company}</div>
+        <div className="text-md">{company}</div>
       </div>
     </Link>
   );

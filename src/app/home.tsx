@@ -1,17 +1,12 @@
 "use client";
 
-import Footer from "./_components/footer";
-import Header from "./_components/header";
 import { HorizontalScroll } from "./_components/horizontal-scroll";
 import Image from "next/image";
 import useDebouncedResize from "./hooks/useDebouncedResize";
 import { useEffect, useState } from "react";
-import Button from "./_components/button";
-import { useRouter } from "next/navigation";
+import { Pill } from "./_components/button";
 
 export default function Home() {
-  const router = useRouter();
-
   const { width, height } = useDebouncedResize();
   const [isLoading, setIsLoading] = useState(true);
 
@@ -38,21 +33,33 @@ export default function Home() {
           Loading ...
         </div>
         <div className={`${isLoading ? "hidden" : ""}`}>
-          <Header selected="HOME" />
-          <div className="mt-12 mb-10 pl-10 pr-[600px]">
-            <div className="flex sans-serif text-7xl font-bold mb-12">
+          <div className="mt-10 mb-10 pl-10 pr-[600px]">
+            <div className="flex sans-serif text-4xl font-bold mb-5">
               Named after the clouds in the sky, now I&apos;m creating digital
               skies in the cloud.
             </div>
-            <div className="text-xl">
+            <div className="text-lg">
               Hi, I&apos;m Cloud! A fullstack software engineer. Get to know me
-              more by exploring my portfolio.
+              more by exploring my portfolio. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat.
             </div>
-            <div className="flex mt-6" id="contact-section">
-              <Button
+            <div
+              className="flex flex-wrap mt-6 gap-1 w-1/2"
+              id="contact-section"
+            >
+              {/* <Button
                 title={"Learn More"}
                 handleClick={() => router.push("/about")}
-              />
+              /> */}
+              <Pill title={"React"} handleClick={() => {}} />
+              <Pill title={"React Native"} handleClick={() => {}} />
+              <Pill title={"Java"} handleClick={() => {}} />
+              <Pill title={"Spring Boot"} handleClick={() => {}} />
+              <Pill title={"TypeScript"} handleClick={() => {}} />
+              <Pill title={"AngularJS"} handleClick={() => {}} />
             </div>
           </div>
           <div className="z-0 content-center px-0 flex-grow">
@@ -60,15 +67,12 @@ export default function Home() {
           </div>
           <Image
             priority
-            className="z-1 absolute bottom-[-22%] right-[10%]"
+            className="z-1 absolute bottom-[-10%] right-[10%]"
             src="/cloud.png"
             alt="Cloud icon"
             width={width / 3}
             height={height / 3}
           />
-          <div className="w-full absolute bottom-0">
-            <Footer />
-          </div>
         </div>
       </main>
     </div>

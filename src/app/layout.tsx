@@ -5,7 +5,7 @@ import "./globals.css";
 // Configure the font
 const workSans = Work_Sans({
   subsets: ["latin"], // Specify the character subsets (e.g., 'latin')
-  weight: ["400", "700"], // Specify the weights you need (e.g., regular and bold)
+  weight: ["300", "400", "700"], // Specify the weights you need (e.g., regular and bold)
   variable: "--font-work-sans", // Optional: Define a CSS variable for the font
 });
 

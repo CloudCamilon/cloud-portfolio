@@ -25,9 +25,9 @@ const HeaderItem = ({
       <div
         className={`
         px-10
-        text-lg
+        text-base
         ${
-          selected ? "font-bold text-black hover:underline" : "font-normal"
+          selected ? "font-boldhover:underline" : "font-normal"
         } cursor-pointer`}
       >
         {title}
@@ -38,8 +38,11 @@ const HeaderItem = ({
 
 export default function Header({ selected }: { selected: HeaderItem }) {
   return (
-    <div className="flex  px-10 w-full h-12 " id="header">
-      <div>CLOUD CAMILON</div>
+    <div
+      className="flex  bg-white text-black  px-10 py-5 w-full sticky top-0 z-50"
+      id="header"
+    >
+      <div className="">CLOUD CAMILON</div>
       <div className="flex flex-1 flex-row justify-center text-center">
         {HeaderItems.map((item, index) => (
           <HeaderItem
