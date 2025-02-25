@@ -2,13 +2,14 @@ import { JSX } from "react";
 import ResumeDownload from "./resume-download";
 import Link from "next/link";
 
-type HeaderItem = "HOME" | "ABOUT" | "PROJECTS" | "SERVICES";
+type HeaderItem = "HOME" | "ABOUT" | "EXPERIENCE" | "PROJECTS" | "MISC";
 
 const HeaderItems = [
   { title: "HOME", link: "/" },
-  { title: "ABOUT", link: "/about" },
-  { title: "PROJECTS", link: "/projects" },
-  { title: "SERVICES", link: "/services" },
+  { title: "ABOUT", link: "/" },
+  { title: "EXPERIENCE", link: "/" },
+  { title: "PROJECTS", link: "/" },
+  { title: "MISC", link: "/" },
 ];
 
 const HeaderItem = ({
