@@ -25,11 +25,9 @@ const HeaderItem = ({
     <Link href={link}>
       <div
         className={`
-        px-10
-        text-base
-        ${
-          selected ? "font-boldhover:underline" : "font-normal"
-        } cursor-pointer`}
+          px-4 
+          text-xs sm:text-lg
+          ${selected ? "font-bold underline" : "font-normal"} cursor-pointer`}
       >
         {title}
       </div>
@@ -40,11 +38,16 @@ const HeaderItem = ({
 export default function Header({ selected }: { selected: HeaderItem }) {
   return (
     <div
-      className="flex  bg-white text-black  px-10 py-5 w-full sticky top-0 z-50"
+      className="flex  flex-row bg-white text-black px-4 sm:px-10 py-5 w-full sticky top-0 z-50"
       id="header"
     >
-      <div className="">CLOUD CAMILON</div>
-      <div className="flex flex-1 flex-row justify-center text-center">
+      {/* Logo */}
+      <div className="hidden sm:block text-center  mb-4 sm:mb-0">
+        CLOUD CAMILON
+      </div>
+
+      {/* Navigation Items */}
+      <div className="flex flex-wrap md:justify-center justify-center gap-4 flex-1">
         {HeaderItems.map((item, index) => (
           <HeaderItem
             key={index}
@@ -54,7 +57,11 @@ export default function Header({ selected }: { selected: HeaderItem }) {
           />
         ))}
       </div>
-      <ResumeDownload />
+
+      {/* Resume Download Button */}
+      <div className="hidden sm:flex mt-4 sm:mt-0">
+        <ResumeDownload />
+      </div>
     </div>
   );
 }
