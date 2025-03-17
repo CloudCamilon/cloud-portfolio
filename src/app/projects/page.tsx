@@ -96,12 +96,7 @@ const ProjectItem = ({
           <div>{content.desc}</div>
           <div>Client: {content.client}</div>
         </div>
-        <Image
-          layout="fill"
-          objectFit="cover" // Ensures the image covers the container
-          src={url}
-          alt="Earnest"
-        />
+        <Image layout="fill" objectFit="scale-down" src={url} alt="Earnest" />
       </div>
 
       {/* Title */}
@@ -119,11 +114,8 @@ const ProjectItem = ({
 
 export default function Page(): JSX.Element {
   return (
-    <div className=" mt-24">
-      <div
-        className="container m-auto grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
-        style={{ gridAutoRows: "minmax(100px, auto)" }} // Ensure rows have a minimum height
-      >
+    <div className="my-24">
+      <div className="sm:px-0 px-6 container m-auto grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((item, index) => (
           <ProjectItem
             key={index}

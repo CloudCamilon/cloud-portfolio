@@ -12,30 +12,17 @@ const Company = ({
   link: string;
 }): JSX.Element => {
   return (
-    <Link href={link} className="h-full text-center">
-      <div className="h-full  flex flex-col">
-        <div className="flex flex-1 h-2/3 justify-center align-middle ">
-          <Image
-            priority
-            className=""
-            src={source}
-            alt=""
-            width={150}
-            height={150}
-          />
-        </div>
-        <div className="text-md">{company}</div>
+    <div className="flex flex-col cursor-pointer">
+      <div className={`relative w-full h-32 md:h-[275px]`}>
+        <Image fill style={{ objectFit: "fill" }} src={source} alt="Earnest" />
       </div>
-    </Link>
+    </div>
   );
 };
 
 export default function Companies(): JSX.Element {
   return (
-    <div
-      id="companies"
-      className="mb-10 grid grid-cols-5 gap-5 w-full h-[20vh] place-items-center "
-    >
+    <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  ">
       <Company
         source={"/finastra.svg"}
         company="Finastra"

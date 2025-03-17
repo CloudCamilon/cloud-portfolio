@@ -2,26 +2,26 @@
 
 import { JSX } from "react";
 import Image from "next/image";
-import useDebouncedResize from "../hooks/useDebouncedResize";
 
 export default function About(): JSX.Element {
-  const { width, height } = useDebouncedResize();
   return (
-    <div className="flex min-h-screen w-full bg-orange-5 mt-12">
-      <main className="min-h-screen flex w-full pt-10 text-black flex-col relative overflow-hidden">
-        <div className="flex flex-row px-10">
-          <div className="flex justify-center w-1/2">
+    <div className="flex mt-12">
+      <main className=" flex pt-10 text-black flex-col relative overflow-hidden">
+        <div className="flex flex-col px-6">
+          <div className={`relative w-full  h-[300px]`}>
             <Image
               priority
-              src="/about.png"
+              src="/about2.jpg"
               alt="About Cloud"
-              width={width / 3.5}
-              height={height / 3.5}
+              objectFit="cover"
+              layout="fill"
             />
           </div>
-          <div className=" flex   h-full flex-col justify-center w-1/2">
-            <div className="mt-12 mb-1 font-bold text-lg">ABOUT</div>
-            <div className="text-md leading-10">
+          <div className=" flex flex-col sm:justify-center sm:w-1/2">
+            <div className="sm:mt-12 mt-6 mb-3 font-bold text-xs sm:text-lg">
+              ABOUT ME
+            </div>
+            <div className="text-xs sm:text-lg  mb-3 leading-6 sm:leading-10">
               I’m an experienced software engineer with seven years in
               full-stack web and mobile development, proficient in Spring
               Framework, React, React Native, and DevOps deployment. Currently
@@ -30,6 +30,9 @@ export default function About(): JSX.Element {
               have worked with Waterfall, Agile Scrum, and Kanban methodologies.
               I have also collaborated with teams from the United Kingdom,
               India, Myanmar, Bangladesh, and the Philippines.
+            </div>
+            <div className="text-xs sm:text-lg leading-6 sm:leading-10">
+              Say hi: cloudcamilon@gmail.com
             </div>
           </div>
         </div>
