@@ -5,7 +5,7 @@ export default function Misc(): JSX.Element {
   return (
     <div>
       <div className=" flex flex-col mt-24 p-6 text-center items-center gap-3">
-        <div className="relative w-full h-[290] ">
+        <div className="relative w-full md:w-[500px] h-[230px] md:h-[350px]">
           <Image
             priority
             src="/pinnacle.jpg"
@@ -18,7 +18,7 @@ export default function Misc(): JSX.Element {
           Core Values Champion Award (Grit) - Pinnacle Awards
         </div>
         <div className="font-light">MDI Novare</div>
-        <div className="text-sm">
+        <div className="text-sm md:w-3/4">
           Recognized for excellence and performance. The annual event honors
           individuals and teams for innovative tech approaches and outstanding
           contributions. Won against 261 core value nominations, highlighting
@@ -26,9 +26,9 @@ export default function Misc(): JSX.Element {
         </div>
       </div>
 
-      <div className="flex flex-col gap-10 my-24 px-6">
-        <div className="flex flex-row justify-center gap-5">
-          {/* Left Section */}
+      <div className="flex flex-col md:flex-row gap-10 my-24 px-6 ">
+        {/* Left Section */}
+        <div className="flex flex-row justify-center gap-5 md:w-1/2">
           <div className="flex flex-col gap-6">
             {/* Top Row */}
             <div className="flex justify-around">
@@ -62,45 +62,43 @@ export default function Misc(): JSX.Element {
               </div>
             </div>
             {/* Bottom Image */}
-            <div className="flex flex-col ">
+            <div className="relative flex flex-col md:w-full w-[272px] md:h-[275px] h-[185px] ">
               <Image
                 priority
                 src="/bootcamp.png"
                 alt="Bootcamp"
-                width={750}
-                height={848}
+                objectFit="cover"
+                layout="fill"
               />
             </div>
 
             {/*Bottom Section */}
-            <div className="flex">
-              <div className="flex flex-col gap-1">
-                <div className="font-bold text-sm">
-                  SQE Boot Camp Batch 23: Top Rated Instructor
-                </div>
-                <div className="font-light text-sm">MDI Novare</div>
-                <div className="text-xs">
-                  Recognized for excellence and performance. The annual event
-                  honors individuals and teams for innovative tech approaches
-                  and outstanding contributions. Won against 261 core value
-                  nominations, highlighting exceptional work among the best in
-                  the organization.
-                </div>
+            <div className="flex flex-col gap-1">
+              <div className="font-bold text-sm">
+                SQE Boot Camp Batch 23: Top Rated Instructor
+              </div>
+              <div className="font-light text-sm">MDI Novare</div>
+              <div className="text-xs">
+                Recognized for excellence and performance. The annual event
+                honors individuals and teams for innovative tech approaches and
+                outstanding contributions. Won against 261 core value
+                nominations, highlighting exceptional work among the best in the
+                organization.
               </div>
             </div>
           </div>
         </div>
 
         {/* Right Section */}
-        <div className="flex flex-col gap-6">
-          <div className="flex flex-col ">
+        <div className="flex flex-col gap-6 md:w-1/2">
+          <div className="relative grow flex flex-col w-full h-[453px]">
             <Image
               priority
               src="/tmi.jpg"
               alt="TMI"
-              width={476}
-              height={848}
-              className="object-cover flex flex-1"
+              objectFit="cover"
+              layout="fill"
+              className=""
             />
           </div>
 

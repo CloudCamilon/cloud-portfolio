@@ -7,8 +7,8 @@ export default function About(): JSX.Element {
   return (
     <div className="flex mt-12">
       <main className=" flex pt-10 text-black flex-col relative overflow-hidden">
-        <div className="flex flex-col px-6">
-          <div className={`relative w-full  h-[300px]`}>
+        <div className="flex flex-col md:flex-row px-6">
+          <div className="relative w-full md:w-[45%] h-[300px] md:h-[475px]">
             <Image
               priority
               src="/about2.jpg"
@@ -17,11 +17,11 @@ export default function About(): JSX.Element {
               layout="fill"
             />
           </div>
-          <div className=" flex flex-col sm:justify-center sm:w-1/2">
-            <div className="sm:mt-12 mt-6 mb-3 font-bold text-xs sm:text-lg">
+          <div className="flex flex-col sm:justify-center md:pl-5 md:w-[55%]">
+            <div className="sm:mt-12 mt-6 mb-3 font-bold text-lg sm:text-xs">
               ABOUT ME
             </div>
-            <div className="text-xs sm:text-lg  mb-3 leading-6 sm:leading-10">
+            <div className="text-xs mb-3 leading-6 sm:leading-5">
               I’m an experienced software engineer with seven years in
               full-stack web and mobile development, proficient in Spring
               Framework, React, React Native, and DevOps deployment. Currently
@@ -31,7 +31,7 @@ export default function About(): JSX.Element {
               I have also collaborated with teams from the United Kingdom,
               India, Myanmar, Bangladesh, and the Philippines.
             </div>
-            <div className="text-xs sm:text-lg leading-6 sm:leading-10">
+            <div className="text-xs lg:text-lg leading-6 sm:leading-10">
               Say hi: cloudcamilon@gmail.com
             </div>
           </div>

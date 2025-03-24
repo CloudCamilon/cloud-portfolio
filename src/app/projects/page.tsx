@@ -115,7 +115,7 @@ const ProjectItem = ({
 export default function Page(): JSX.Element {
   return (
     <div className="my-24">
-      <div className="sm:px-0 px-6 container m-auto grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div className="md:px-6 px-6 container m-auto grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((item, index) => (
           <ProjectItem
             key={index}
