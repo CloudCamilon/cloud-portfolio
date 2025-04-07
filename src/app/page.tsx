@@ -25,7 +25,11 @@ export default function Main() {
   return false ? (
     <ComingSoon />
   ) : (
-    <div className={`bg-white text-black ${isLoading ? "hidden" : "visible"}`}>
+    <div
+      className={`bg-white text-black ${
+        isLoading ? "hidden" : "visible"
+      } 2xl:px-[25%]`}
+    >
       <Header selected="HOME" />
       <Home />
       <About />

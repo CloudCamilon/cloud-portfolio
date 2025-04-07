@@ -29,7 +29,7 @@ export default function Experience(): JSX.Element {
         ref={novareExp}
         className="flex md:items-end flex-col text-sm w-full md:pl-20"
       >
-        <div className="flex flex-col md:w-1/2 gap-3">
+        <div className="flex flex-col md:w-1/2 gap-5">
           <div className="font-bold">
             Lead & Senior Lead Software Engineer at MDI Novare
           </div>
@@ -43,7 +43,7 @@ export default function Experience(): JSX.Element {
             star rating. People manager and instructor for MDI Novare&apos;s
             boot camp programs.
           </div>
-          <div className={`relative w-full h-[200px]`}>
+          <div className={`relative w-full h-[200px] lg:h-[300px]`}>
             <Image
               priority
               className=""
@@ -58,7 +58,7 @@ export default function Experience(): JSX.Element {
 
       <div
         ref={finastraExp}
-        className="flex flex-col gap-2 text-sm  md:w-1/2 md:pr-5"
+        className="flex flex-col gap-5 text-sm md:w-1/2 md:pr-10"
       >
         <div className="font-bold">
           Associate & Software Engineer at Finastra
@@ -72,7 +72,7 @@ export default function Experience(): JSX.Element {
           Master and handled DevOps activities, including server maintenance,
           automation, and product releases.{" "}
         </div>
-        <div className={`relative w-full h-[200px]`}>
+        <div className={`relative w-full h-[200px] lg:h-[300px]`}>
           <Image
             priority
             className=""
@@ -88,7 +88,7 @@ export default function Experience(): JSX.Element {
         ref={botBrosExp}
         className="flex md:items-end flex-col text-sm w-full md:pl-20"
       >
-        <div className="flex flex-col md:w-1/2 gap-3">
+        <div className="flex flex-col md:w-1/2 gap-5">
           <div className="font-bold">
             Junior Developer Volunteer & Intern at BotBros AI
           </div>
@@ -98,7 +98,7 @@ export default function Experience(): JSX.Element {
             clients. Created a mobile-responsive informational site for a client
             in Germany.
           </div>
-          <div className={`relative w-full h-[200px]`}>
+          <div className={`relative w-full h-[200px]  lg:h-[300px]`}>
             <Image
               priority
               className=""

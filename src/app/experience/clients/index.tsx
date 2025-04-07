@@ -22,7 +22,7 @@ const Company = ({
 
 export default function Companies(): JSX.Element {
   return (
-    <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5  ">
+    <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
       <Company source={"/finastra.svg"} link={"https://www.finastra.com"} />
       <Company source={"/novare.svg"} link={"https://www.novare.com.ph"} />
       <Company
