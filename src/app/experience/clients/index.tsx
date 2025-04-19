@@ -4,27 +4,17 @@ import Link from "next/link";
 
 const Company = ({
   source,
-  company,
   link,
 }: {
   source: string;
-  company: string;
   link: string;
 }): JSX.Element => {
   return (
-    <Link href={link} className="h-full text-center">
-      <div className="h-full  flex flex-col">
-        <div className="flex flex-1 h-2/3 justify-center align-middle ">
-          <Image
-            priority
-            className=""
-            src={source}
-            alt=""
-            width={150}
-            height={150}
-          />
+    <Link href={link}>
+      <div className="flex flex-col cursor-pointer items-center">
+        <div className={`relative w-full md:w-[150px] h-32 md:h-[100px]`}>
+          <Image fill src={source} alt="Earnest" />
         </div>
-        <div className="text-md">{company}</div>
       </div>
     </Link>
   );
@@ -32,36 +22,15 @@ const Company = ({
 
 export default function Companies(): JSX.Element {
   return (
-    <div
-      id="companies"
-      className="mb-10 grid grid-cols-5 gap-5 w-full h-[20vh] place-items-center "
-    >
-      <Company
-        source={"/finastra.svg"}
-        company="Finastra"
-        link={"https://www.finastra.com"}
-      />
-
-      <Company
-        source={"/novare.svg"}
-        company="MDI Novare"
-        link={"https://www.novare.com.ph"}
-      />
+    <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-5">
+      <Company source={"/finastra.svg"} link={"https://www.finastra.com"} />
+      <Company source={"/novare.svg"} link={"https://www.novare.com.ph"} />
       <Company
         source={"/metrobank.svg"}
-        company="Metropolitan Bank"
         link={"https://www.metrobank.com.ph"}
       />
-      <Company
-        source={"/bb.svg"}
-        company="BotBros AI"
-        link={"https://www.botbros.ai"}
-      />
-      <Company
-        source={"/bplus.svg"}
-        company="B+ Studio"
-        link={"https://www.b-plus.studio"}
-      />
+      <Company source={"/bb.svg"} link={"https://www.botbros.ai"} />
+      <Company source={"/bplus.svg"} link={"https://www.b-plus.studio"} />
     </div>
   );
 }

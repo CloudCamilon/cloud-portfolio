@@ -29,7 +29,7 @@ export function Pill({
   return (
     <div
       key={index}
-      className="flex justify-center items-center h-7 cursor-pointer text-center  text-sm border rounded-3xl px-3  border-black"
+      className="flex justify-center items-center h-7 cursor-pointer text-center text-xs border rounded-3xl px-3  border-black"
       onClick={handleClick}
     >
       {title}
