@@ -37,7 +37,7 @@ const HeaderItem = ({
 
 export default function Header({ selected }: { selected: HeaderItem }) {
   return (
-    <div className="flex bg-white justify-between sticky z-50 top-0 w-page h-[120px] pl-6 pr-20 md:pr-6 items-center">
+    <div className="flex bg-white justify-between sticky z-50 top-0 w-page h-[100px] pl-6 pr-20 md:pr-6 items-center">
       <div className="text-center text-lg md:text-xs">CLOUD CAMILON</div>
       <div className="hidden sm:flex flex-wrap flex-row gap-6">
         {HeaderItems.map((item, index) => (

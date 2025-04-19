@@ -24,7 +24,10 @@ export default function Experience(): JSX.Element {
   }, []);
 
   return (
-    <div className="relative flex flex-col pt-16 pb-5 gap-20">
+    <div
+      id="experience-section"
+      className="relative flex flex-col mt-16 pb-5 gap-20"
+    >
       <div
         ref={novareExp}
         className="flex md:items-end flex-col text-sm w-full md:pl-20"
@@ -49,8 +52,8 @@ export default function Experience(): JSX.Element {
               className=""
               src="/novare.jpg"
               alt="Novare Project"
-              objectFit="cover"
-              layout="fill"
+              style={{ objectFit: "cover" }}
+              fill
             />
           </div>
         </div>
@@ -78,8 +81,8 @@ export default function Experience(): JSX.Element {
             className=""
             src="/finastra.jpg"
             alt="Finastra Project"
-            objectFit="cover"
-            layout="fill"
+            style={{ objectFit: "cover" }}
+            fill
           />
         </div>
       </div>
@@ -104,8 +107,8 @@ export default function Experience(): JSX.Element {
               className=""
               src="/botbros.jpg"
               alt="Novare Project"
-              objectFit="cover"
-              layout="fill"
+              style={{ objectFit: "cover" }}
+              fill
             />
           </div>
         </div>

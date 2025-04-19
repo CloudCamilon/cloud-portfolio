@@ -6,9 +6,9 @@ import { Pill } from "./_components/button";
 
 export default function Home() {
   return (
-    <div className=" flex  px-6">
-      <main className="flex relative md:pb-16">
-        <div className="flex text-center items-center md:text-left md:items-start pt-10 flex-col relative md:w-4/6">
+    <div className="flex px-6 mt-10">
+      <main className="flex relative">
+        <div className="flex text-center items-center md:text-left md:items-start flex-col relative md:w-4/6">
           <Image
             src={"/clouds.svg"}
             alt={"cloud-logo"}
@@ -43,8 +43,8 @@ export default function Home() {
             className="hidden md:flex z-1 absolute"
             src="/cloud.png"
             alt="Cloud icon"
-            objectFit="cover"
-            layout="fill"
+            style={{ objectFit: "cover" }}
+            fill
           />
         </div>
       </main>

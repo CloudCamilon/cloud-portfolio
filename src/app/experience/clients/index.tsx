@@ -13,7 +13,7 @@ const Company = ({
     <Link href={link}>
       <div className="flex flex-col cursor-pointer items-center">
         <div className={`relative w-full md:w-[150px] h-32 md:h-[100px]`}>
-          <Image objectFit="fill" layout="fill" src={source} alt="Earnest" />
+          <Image fill src={source} alt="Earnest" />
         </div>
       </div>
     </Link>

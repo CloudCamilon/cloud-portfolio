@@ -5,16 +5,16 @@ import Image from "next/image";
 
 export default function About(): JSX.Element {
   return (
-    <div className="flex mt-12">
-      <main className=" flex pt-10 text-black flex-col relative overflow-hidden">
+    <div className="flex mt-16">
+      <main className=" flex  text-black flex-col relative overflow-hidden">
         <div className="flex flex-col md:flex-row px-6">
           <div className="relative w-full md:w-[45%] lg:w-[50%] h-[300px] md:h-[475px] lg:h-[650px]">
             <Image
               priority
               src="/about2.jpg"
               alt="About Cloud"
-              objectFit="cover"
-              layout="fill"
+              style={{ objectFit: "cover" }}
+              fill
             />
           </div>
           <div className=" md:w-[53%] lg:w-[70%] flex flex-col justify-center md:pl-5  align-middle self-center items-center ">

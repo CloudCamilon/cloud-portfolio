@@ -96,7 +96,12 @@ const ProjectItem = ({
           <div>{content.desc}</div>
           <div>Client: {content.client}</div>
         </div>
-        <Image layout="fill" objectFit="scale-down" src={url} alt="Earnest" />
+        <Image
+          style={{ objectFit: "scale-down" }}
+          fill
+          src={url}
+          alt="Earnest"
+        />
       </div>
 
       {/* Title */}
@@ -114,7 +119,7 @@ const ProjectItem = ({
 
 export default function Page(): JSX.Element {
   return (
-    <div className="my-24">
+    <div id="projects-section" className="my-16">
       <div className="md:px-6 px-6 container m-auto grid gap-10 grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {PROJECTS.map((item, index) => (
           <ProjectItem

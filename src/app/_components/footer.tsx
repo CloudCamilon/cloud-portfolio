@@ -42,7 +42,7 @@ export default function Footer(): JSX.Element {
           </div>
         </div>
       </div>
-      <div className="flex flex-col-reverse h-1/2">
+      <div className="flex flex-col-reverse h-20 sm:h-32">
         <div>Copyright © 2025 Cloud Camilon. All rights reserved.</div>
       </div>
     </div>

@@ -3,15 +3,15 @@ import Image from "next/image";
 
 export default function Misc(): JSX.Element {
   return (
-    <div>
-      <div className=" flex flex-col mt-24 p-6 text-center items-center gap-3">
+    <div id="misc-section">
+      <div className=" flex flex-col p-6 text-center items-center gap-3">
         <div className="relative w-full md:w-[500px] h-[230px] md:h-[350px]">
           <Image
             priority
             src="/pinnacle.jpg"
             alt="Cloud icon"
-            objectFit="cover"
-            layout="fill"
+            style={{ objectFit: "cover" }}
+            fill
           />
         </div>
         <div className="font-bold w-2/3">
@@ -26,7 +26,7 @@ export default function Misc(): JSX.Element {
         </div>
       </div>
 
-      <div className="flex flex-col md:flex-row gap-10 my-24 px-6 ">
+      <div className="flex flex-col md:flex-row gap-10 my-16 px-6 ">
         {/* Left Section */}
         <div className="flex flex-row justify-center gap-5 md:w-1/2">
           <div className="flex flex-col gap-6">
@@ -67,8 +67,8 @@ export default function Misc(): JSX.Element {
                 priority
                 src="/bootcamp.png"
                 alt="Bootcamp"
-                objectFit="cover"
-                layout="fill"
+                style={{ objectFit: "cover" }}
+                fill
               />
             </div>
 
@@ -96,9 +96,8 @@ export default function Misc(): JSX.Element {
               priority
               src="/tmi.jpg"
               alt="TMI"
-              objectFit="cover"
-              layout="fill"
-              className=""
+              style={{ objectFit: "cover" }}
+              fill
             />
           </div>
 
