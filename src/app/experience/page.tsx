@@ -5,15 +5,14 @@ import Experience from "./experience";
 export default function Page(): JSX.Element {
   return (
     <div
-      className="flex min-h-screen w-full "
+      id="career-section"
+      className="flex px-6 mt-16"
       style={{ backgroundColor: "white" }}
     >
-      <main className="min-h-screen flex w-full mt-12 text-black flex-col relative overflow-hidden">
-        <div className="flex px-10">
-          <Companies />
-        </div>
+      <div className="flex w-full mt-14 text-black flex-col ">
+        <Companies />
         <Experience />
-      </main>
+      </div>
     </div>
   );
 }
