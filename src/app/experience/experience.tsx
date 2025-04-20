@@ -32,12 +32,12 @@ export default function Experience(): JSX.Element {
         ref={novareExp}
         className="flex md:items-end flex-col text-sm w-full md:pl-20"
       >
-        <div className="flex flex-col md:w-1/2 gap-5">
-          <div className="font-bold">
+        <div className="flex flex-col md:w-1/2 gap-3">
+          <div className="text-base font-bold">
             Lead & Senior Lead Software Engineer at MDI Novare
           </div>
           <div className="font-light">2021 - Present</div>
-          <div className="text-xs">
+          <div className="text-xs leading-6">
             Development and stakeholder management for client (Metrobank).
             Modernized a legacy system for processes such as check encashment
             and cash deposit for digital banking. Led the creation of a dynamic
@@ -61,13 +61,13 @@ export default function Experience(): JSX.Element {
 
       <div
         ref={finastraExp}
-        className="flex flex-col gap-5 text-sm md:w-1/2 md:pr-10"
+        className="flex flex-col gap-3 text-sm md:w-1/2 md:pr-10"
       >
-        <div className="font-bold">
+        <div className="text-base font-bold">
           Associate & Software Engineer at Finastra
         </div>
         <div className="font-light">2019 - 2021</div>
-        <div className="text-xs">
+        <div className="text-xs leading-6">
           Developed new features and improved components for online banking.
           Customized banking products and supported global services for clients
           in Myanmar and Bangladesh. Served a collective online customer base
@@ -91,12 +91,12 @@ export default function Experience(): JSX.Element {
         ref={botBrosExp}
         className="flex md:items-end flex-col text-sm w-full md:pl-20"
       >
-        <div className="flex flex-col md:w-1/2 gap-5">
-          <div className="font-bold">
+        <div className="flex flex-col md:w-1/2 gap-3">
+          <div className="text-base font-bold">
             Junior Developer Volunteer & Intern at BotBros AI
           </div>
           <div className="font-light">2019 - 2021</div>
-          <div className="text-xs">
+          <div className="text-xs leading-6">
             Built an English Learning and a Human Resource system for local
             clients. Created a mobile-responsive informational site for a client
             in Germany.

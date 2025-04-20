@@ -84,10 +84,7 @@ const ProjectItem = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div
-        className="relative z-10"
-        style={{ height: "250px" }} // Fixed height for the image container
-      >
+      <div className="relative z-10" style={{ height: "250px" }}>
         <div
           className={`flex flex-col gap-5 py-5 pr-5 top-0 bg-white absolute h-full w-full z-50   ${
             !hovered ? "hidden" : ""
@@ -104,11 +101,11 @@ const ProjectItem = ({
         />
       </div>
 
-      {/* Title */}
-      <div className="font-bold">{title}</div>
+      <div id="project-title" className="text-base font-bold">
+        {title}
+      </div>
 
-      {/* Tech Pills */}
-      <div className="flex gap-2 flex-wrap">
+      <div id="project-techstack" className="flex gap-2 flex-wrap">
         {tech.map((item, index) => (
           <Pill key={index} title={item} handleClick={() => {}} />
         ))}

@@ -16,10 +16,10 @@ export default function Home() {
             height={51}
             className="mb-14 md:mb-6 md:invisible"
           />
-          <div className="w-4/5 md:w-full font-bold mb-3 leading-8">
+          <div className="w-4/5 md:w-full font-bold mb-3 text-lg">
             Cloud is a full-stack developer making clouds in the sky.
           </div>
-          <div className="text-xs leading-8 ">
+          <div className="text-xs leading-6">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
