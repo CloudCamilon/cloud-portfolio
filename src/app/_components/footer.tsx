@@ -12,8 +12,8 @@ export default function Footer(): JSX.Element {
           <div>PROJECTS</div>
           <div>MISC</div>
         </div>
-        <div className="w-[65%] flex flex-col sm:text-base justify-between  gap-1 ">
-          <div className="flex flex-wrap flex-col gap-1 ">
+        <div className="w-[65%] flex flex-col sm:text-base justify-between  gap-3">
+          <div className="flex flex-wrap flex-col gap-2">
             <div className="md:text-lg">Get in touch</div>
             <div>cloudcamilon@gmail.com</div>
             <div>
