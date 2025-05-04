@@ -11,7 +11,7 @@ import About from "./about/page";
 import { useEffect, useState } from "react";
 
 export default function Main() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     // Simulate waiting for fonts or assets to load
@@ -28,14 +28,16 @@ export default function Main() {
     <div
       className={`bg-white text-black ${
         isLoading ? "hidden" : "visible"
-      } 2xl:px-[25%]`}
+      }  2xl:px-[25%]`}
     >
       <Header selected="HOME" />
-      <Home />
-      <About />
-      <Experience />
-      <Projects />
-      <Misc />
+      <div className="lg:px-[5%] xl:px-10%]">
+        <Home />
+        <About />
+        <Experience />
+        <Projects />
+        <Misc />
+      </div>
       <Footer />
     </div>
   );

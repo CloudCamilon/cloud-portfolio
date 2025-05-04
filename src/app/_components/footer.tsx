@@ -3,7 +3,7 @@ import { JSX } from "react";
 
 export default function Footer(): JSX.Element {
   return (
-    <div className="flex flex-col text-xs  sm:p-20  p-5 sm:text-sm bg-[#EFF2EF] w-full sm:h-[408] h-[250]">
+    <div className="flex flex-col text-xs p-5 md:p-10 lg:p-20  sm:text-sm bg-[#EFF2EF] w-full sm:h-[408] h-[250]">
       <div className="flex justify-between">
         <div className="flex flex-col sm:text-base gap-3 ">
           <div>HOME</div>

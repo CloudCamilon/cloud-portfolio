@@ -16,7 +16,7 @@ export default function Home() {
             height={51}
             className="mb-14 md:mb-6 md:invisible"
           />
-          <div className="w-4/5 md:w-full font-bold mb-3 text-lg">
+          <div className="w-4/5 md:w-full font-bold mb-3 text-2xl">
             Cloud is a full-stack developer making clouds in the sky.
           </div>
           <div className="text-xs leading-6">

@@ -62,7 +62,7 @@ export default function Misc(): JSX.Element {
               </div>
             </div>
             {/* Bottom Image */}
-            <div className="relative flex flex-col md:w-full w-[272px] md:h-[275px] h-[185px] ">
+            <div className="relative flex flex-col w-full  md:h-[275px] h-[185px] ">
               <Image
                 priority
                 src="/bootcamp.png"
