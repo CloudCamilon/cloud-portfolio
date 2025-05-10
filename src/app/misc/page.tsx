@@ -1,3 +1,5 @@
+"use client";
+
 import { JSX } from "react";
 import Image from "next/image";
 
@@ -18,7 +20,7 @@ export default function Misc(): JSX.Element {
           Core Values Champion Award (Grit) - Pinnacle Awards
         </div>
         <div className="font-light text-sm">MDI Novare</div>
-        <div className="text-xs md:w-3/4 leading-6">
+        <div className="text-xs md:w-3/4 leading-6 lg:w-[50%]">
           Recognized for excellence and performance. The annual event honors
           individuals and teams for innovative tech approaches and outstanding
           contributions. Won against 261 core value nominations, highlighting
@@ -79,11 +81,10 @@ export default function Misc(): JSX.Element {
               </div>
               <div className="font-light text-sm">MDI Novare</div>
               <div className="text-xs leading-6">
-                Recognized for excellence and performance. The annual event
-                honors individuals and teams for innovative tech approaches and
-                outstanding contributions. Won against 261 core value
-                nominations, highlighting exceptional work among the best in the
-                organization.
+                {`Invited as an instructor for MDI Novare's premiere junior
+                bootcamp program. Participated in a number of batches and taught
+                subjects ranging from basic Java to advanced Spring MVC courses.
+                Recognized as highest rated instructor for Batch 23.`}
               </div>
             </div>
           </div>
@@ -108,11 +109,11 @@ export default function Misc(): JSX.Element {
               </div>
               <div className="font-light text-sm">MDI Novare</div>
               <div className="text-xs leading-6">
-                Shortlisted and completed MDI Novare’s fast-tracked technical
-                and leadership development program for emerging leaders that are
-                ready to be full time Technical Managers. Attended 3 months of
-                technical and leadership training + 3 months of On-The-Job (OJT)
-                sessions.{" "}
+                {`Shortlisted and completed MDI Novare’s fast-tracked technical
+                and leadership development program for emerging leaders that
+                have the potential to be full time Technical Managers. Attended
+                3 months of technical and leadership training + 3 months of
+                On-The-Job (OJT) sessions.`}
               </div>
             </div>
           </div>

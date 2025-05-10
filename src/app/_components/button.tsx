@@ -20,7 +20,6 @@ export function Button({
 export function Pill({
   title,
   handleClick,
-  index,
 }: {
   title: string;
   handleClick: () => void;
@@ -28,7 +27,6 @@ export function Pill({
 }): JSX.Element {
   return (
     <div
-      key={index}
       className="flex justify-center items-center h-7 cursor-pointer text-center text-xs border rounded-3xl px-3  border-black"
       onClick={handleClick}
     >
