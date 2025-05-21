@@ -3,16 +3,26 @@
 import { JSX, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import AnimateScroll from "../_components/animate-scroll";
+import { TimelineBar } from "../_components/Timeline/timeline-bar";
 
 export default function Experience(): JSX.Element {
   const novareExp = useRef<HTMLDivElement>(null);
   const finastraExp = useRef<HTMLDivElement>(null);
   const botBrosExp = useRef<HTMLDivElement>(null);
+  const barReference = useRef<HTMLDivElement | null>(null);
+
   const [height, setHeight] = useState({ novare: 0, finastra: 0, botbros: 0 });
 
   const [novareThreshold, setNovareThreshold] = useState(false);
   const [finastraThreshold, setFinastraThreshold] = useState(false);
   const [botbrosThreshold, setBotbrosThreshold] = useState(false);
+  const [experienceHeight, setExperienceHeight] = useState<number | undefined>(
+    undefined
+  );
+
+  useEffect(() => {
+    setExperienceHeight(barReference.current?.clientHeight);
+  }, [barReference]);
 
   /* use effect to get height of section experience */
   useEffect(() => {
@@ -36,7 +46,6 @@ export default function Experience(): JSX.Element {
     >
       <AnimateScroll
         onIntersect={(intersect) => {
-          console.log(intersect + "novare");
           setNovareThreshold(intersect);
         }}
       >
@@ -74,7 +83,6 @@ export default function Experience(): JSX.Element {
       </AnimateScroll>
       <AnimateScroll
         onIntersect={(intersect) => {
-          console.log(intersect + "finastra");
           setFinastraThreshold(intersect);
         }}
       >
@@ -108,7 +116,6 @@ export default function Experience(): JSX.Element {
       </AnimateScroll>
       <AnimateScroll
         onIntersect={(intersect) => {
-          console.log(intersect + "finastra");
           setBotbrosThreshold(intersect);
         }}
       >
@@ -140,33 +147,30 @@ export default function Experience(): JSX.Element {
         </div>
       </AnimateScroll>
       <div
+        ref={barReference}
         id="experience-bar"
         className="hidden md:flex w-2 h-full bg-[#D9D9D9] rounded-xl absolute left-1/2"
       >
+        <TimelineBar barHeight={experienceHeight}></TimelineBar>
+
         <div
-          className={`transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
+          className={`z-10 transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
             novareThreshold ? "bg-cloud-palette-blue" : "bg-[#D9D9D9]"
           }`}
         />
         <div
           style={{ top: height.novare + 75 }}
-          className={`transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
+          className={`z-10 transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
             finastraThreshold ? "bg-cloud-palette-blue" : "bg-[#D9D9D9]"
           }`}
         />
         <div
           style={{ top: height.finastra + height.novare + 160 }}
-          className={`transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
+          className={`z-10 transition-all duration-1000 ease-out absolute -left-1.5 rounded-full w-5 h-5 ${
             botbrosThreshold ? "bg-cloud-palette-blue" : "bg-[#D9D9D9]"
           }`}
         />
       </div>
-
-      <div
-        id="experience-progress"
-        // style={{ height: progress }}
-        className={`max-h-full hidden md:flex w-2  bg-[#3185FC] rounded-xl absolute left-1/2`}
-      ></div>
     </div>
   );
 }

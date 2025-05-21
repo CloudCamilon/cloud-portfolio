@@ -1,0 +1,14 @@
+.progressBarWrapper {
+  position: relative;
+  width: 8px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.progressBar {
+  width: 100%;
+  background: #3185fc;
+  transform-origin: top;
+  height: 100%;
+  border-radius: 12px;
+}
