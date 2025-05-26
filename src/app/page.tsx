@@ -28,7 +28,7 @@ export default function Main() {
     <div
       className={`bg-white text-black ${
         isLoading ? "hidden" : "visible"
-      }  2xl:px-[25%]`}
+      }  2xl:px-[15%]`}
     >
       <Header selected="HOME" />
       <div className="lg:px-[5%] xl:px-10%]">

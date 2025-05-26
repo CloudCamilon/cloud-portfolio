@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { JSX } from "react";
 
 export default function Footer(): JSX.Element {
@@ -23,22 +24,27 @@ export default function Footer(): JSX.Element {
           </div>
 
           <div className="flex flex-row gap-3">
-            <Image
-              priority
-              className=""
-              src="icons/github.svg"
-              alt="Github icon"
-              height={16}
-              width={16}
-            />
-            <Image
-              priority
-              className=""
-              src="icons/linkedin.svg"
-              alt="Github icon"
-              height={16}
-              width={16}
-            />
+            <Link href="https://github.com/CloudCamilon">
+              <Image
+                priority
+                className=""
+                src="icons/github.svg"
+                alt="Github icon"
+                height={16}
+                width={16}
+              />
+            </Link>
+
+            <Link href={"https://www.linkedin.com/in/cloudcamilon/"}>
+              <Image
+                priority
+                className=""
+                src="icons/linkedin.svg"
+                alt="Github icon"
+                height={16}
+                width={16}
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -1,7 +1,10 @@
+"use client";
+
 import { JSX } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Muni } from "./muni";
+import { motion } from "framer-motion";
 
 const Company = ({
   source,
@@ -27,23 +30,30 @@ export default function Companies(): JSX.Element {
       <div className="text-center mb-6 font-bold text-lg sm:text-xs">
         COMPANIES
       </div>
-      <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 content-baseline">
-        <Company source={"/finastra.svg"} link={"https://www.finastra.com"} />
-        <Company source={"/novare.svg"} link={"https://www.novare.com.ph"} />
-        <Company
-          source={"/metrobank.svg"}
-          link={"https://www.metrobank.com.ph"}
-        />
-        <Company source={"/bb.svg"} link={"https://www.botbros.ai"} />
-        <Company source={"/bplus.svg"} link={"https://www.b-plus.studio"} />
-        {/* <Company
-          source={"/munimuning.svg"}
-          link={"https://www.b-plus.studio"}
-        /> */}
-        <div className="flex justify-center align-middle items-center">
-          <Muni />
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        transition={{ duration: 0.7 }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+      >
+        <div className="sm:px-0 gap-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6 content-baseline">
+          <Company source={"/finastra.svg"} link={"https://www.finastra.com"} />
+          <Company source={"/novare.svg"} link={"https://www.novare.com.ph"} />
+          <Company
+            source={"/metrobank.svg"}
+            link={"https://www.metrobank.com.ph"}
+          />
+          <Company source={"/bb.svg"} link={"https://www.botbros.ai"} />
+          <Company source={"/bplus.svg"} link={"https://www.b-plus.studio"} />
+
+          <div className="flex justify-center align-middle items-center">
+            <Muni />
+          </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

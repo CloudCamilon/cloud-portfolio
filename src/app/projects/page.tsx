@@ -28,7 +28,7 @@ const PROJECTS = [
   {
     title: "Dynamic Forms - Banking",
     tech: ["React", "Spring Boot", "PostgreSQL"],
-    url: "/df.png",
+    url: "/metrobankbg.jpg",
     content: {
       client: "Metrobank",
       desc: `Dynamic form builder for the various forms used by the back-office of the bank.`,
