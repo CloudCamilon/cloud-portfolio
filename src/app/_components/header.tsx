@@ -1,41 +1,48 @@
 import { JSX } from "react";
 import ResumeDownload from "./resume-download";
-import Link from "next/link";
 
 type HeaderItem = "HOME" | "ABOUT" | "EXPERIENCE" | "PROJECTS" | "MISC";
 
-const HeaderItems = [
-  { title: "HOME", link: "/" },
-  { title: "ABOUT", link: "/" },
-  { title: "EXPERIENCE", link: "/" },
-  { title: "PROJECTS", link: "/" },
-  { title: "MISC", link: "/" },
-];
-
-const HeaderItem = ({
-  title,
-  selected,
-  link,
-}: {
+type HeaderType = {
   title: string;
   selected?: boolean;
   link: string;
-}): JSX.Element => {
+};
+
+const HeaderItems: HeaderType[] = [
+  { title: "HOME", link: "cloud-home" },
+  { title: "ABOUT", link: "cloud-about" },
+  { title: "EXPERIENCE", link: "cloud-experience" },
+  { title: "PROJECTS", link: "cloud-projects" },
+  { title: "MISC", link: "cloud-misc" },
+];
+
+const HeaderItem = ({ title, selected, link }: HeaderType): JSX.Element => {
+  const scrollToSection = function (sectionId: string) {
+    const element = document.getElementById(sectionId);
+    const headerOffset = 100;
+    const elementPosition = element?.getBoundingClientRect().top;
+    const offsetPosition = elementPosition! + window.scrollY - headerOffset;
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth",
+    });
+  };
+
   return (
-    <Link href={link}>
-      <div
-        className={`
+    <div
+      onClick={() => scrollToSection(link)}
+      className={`
           px-4 
           text-xs lg:text-base
           ${selected ? "font-bold underline" : "font-normal"} cursor-pointer`}
-      >
-        {title}
-      </div>
-    </Link>
+    >
+      {title}
+    </div>
   );
 };
 
-export default function Header({ selected }: { selected: HeaderItem }) {
+export default function Header() {
   return (
     <div className="flex bg-white justify-between sticky z-50 top-0 w-page h-[100px] pl-6 pr-20 md:pr-6 items-center">
       <div className="text-center text-lg md:text-xs lg:text-lg">
@@ -46,7 +53,7 @@ export default function Header({ selected }: { selected: HeaderItem }) {
           <HeaderItem
             key={index}
             title={item.title}
-            selected={item.title === selected}
+            selected={item.selected}
             link={item.link}
           />
         ))}
@@ -57,32 +64,3 @@ export default function Header({ selected }: { selected: HeaderItem }) {
     </div>
   );
 }
-
-// export default function Header({ selected }: { selected: HeaderItem }) {
-//   return (
-//     <div
-//       className="flex flex-row bg-white text-black px-4 sm:px-10 py-5 w-full sticky top-0 z-50"
-//       id="header"
-//     >
-//       {/* Logo */}
-//       <div className="text-center">CLOUD CAMILON</div>
-
-//       {/* Navigation Items */}
-//       <div className="hidden sm:flex flex-wrap md:justify-center justify-center gap-4 flex-1">
-//         {HeaderItems.map((item, index) => (
-//           <HeaderItem
-//             key={index}
-//             title={item.title}
-//             selected={item.title === selected}
-//             link={item.link}
-//           />
-//         ))}
-//       </div>
-
-//       {/* Resume Download Button */}
-//       <div className="hidden sm:flex ">
-//         <ResumeDownload />
-//       </div>
-//     </div>
-//   );
-// }

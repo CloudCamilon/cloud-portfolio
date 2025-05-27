@@ -80,6 +80,7 @@ const ProjectItem = ({
 
   return (
     <div
+      id="cloud-projects"
       className="relative flex flex-col text-black h-auto gap-3 cursor-pointer"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}

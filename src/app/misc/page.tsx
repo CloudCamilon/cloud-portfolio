@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Misc(): JSX.Element {
   return (
-    <div id="misc-section">
+    <div id="cloud-misc">
       <div className=" flex flex-col p-6 text-center items-center gap-3">
         <div className="relative w-full md:w-[500px] h-[230px] md:h-[350px]">
           <Image

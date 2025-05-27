@@ -8,16 +8,18 @@ const SKILLS = [
   { title: "React" },
   { title: "React Native" },
   { title: "TypeScript" },
+  { title: "Tailwind CSS" },
+  { title: "Next.js" },
+  { title: "Angular.js" },
   { title: "Java" },
   { title: "Spring Framework" },
   { title: "PostgreSQL" },
   { title: "MySQL" },
-  { title: "AngularJS" },
 ];
 
 export default function Home() {
   return (
-    <div className="flex px-6 mt-10">
+    <div id="cloud-home" className="flex px-6 mt-10">
       <main className="flex relative">
         <div className="flex text-center items-center md:text-left md:items-start flex-col relative md:w-4/6 ">
           <Image
@@ -27,21 +29,24 @@ export default function Home() {
             height={51}
             className="mb-14 md:mb-6 md:invisible"
           />
-          <p className="w-4/5 md:w-full font-bold mb-3 text-3xl md:text-3xl lg:text-5xl xl:text-5xl">
+          <p className="w-4/5 md:w-full font-bold mb-3 lg:mb-6  text-3xl md:text-3xl lg:text-5xl xl:text-5xl">
             <span className="text-[#3185FC]">Cloud</span> is a
             <span className="text-[#EC4640]"> full-stack </span>
             developer <span className="text-[#FFC233]"> making </span> clouds
             <span className="text-[#FFC233]"> in </span>
             the <span className="text-[#3185FC]"> sky. </span>
           </p>
-          <div className="text-xs lg:text-sm leading-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
+          <div className="text-xs lg:text-sm leading-6 xl:w-10/12">
+            {`Hi! My name is Cloud Camilon. I build things both for web and
+            mobile. What I love the most are two things: seeing my imaginations
+            come to life through software and learning alongside other people.
+            Some days I'm deep in React components, other days I'm wrestling
+            with Spring Framework APIs, but every day I'm always looking for
+            ways to feed my curiosity—whether it's UI/UX, DevOps, or AI. Get to
+            know more about me and my journey in this digital world.`}
           </div>
           <div
-            className="hidden md:flex flex-wrap mt-6 gap-1 w-4/5 lg:w-1/2"
+            className="hidden md:flex flex-wrap mt-6 gap-1 w-4/5 lg:w-2/3"
             id="contact-section"
           >
             {SKILLS.map((item, index) => (

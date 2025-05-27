@@ -30,7 +30,7 @@ export default function Main() {
         isLoading ? "hidden" : "visible"
       }  2xl:px-[15%]`}
     >
-      <Header selected="HOME" />
+      <Header />
       <div className="lg:px-[5%] xl:px-10%]">
         <Home />
         <About />

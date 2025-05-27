@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About(): JSX.Element {
   return (
-    <div className="flex mt-16">
+    <div id="cloud-about" className="flex mt-16">
       <main className=" flex  text-black flex-col relative overflow-hidden">
         <div className="flex flex-col md:flex-row px-6">
           <div className="relative w-full md:w-[45%] lg:w-[50%] h-[300px] md:h-[475px] lg:h-[650px]">
